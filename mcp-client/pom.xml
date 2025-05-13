@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.pig4cloud.pig</groupId>
+        <artifactId>mcp</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <groupId>mcp-client</groupId>
+    <artifactId>mcp-client</artifactId>
+    <name>mcp-client</name>
+    <description>mcp-client</description>
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>mcp-common</groupId>
+            <artifactId>mcp-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <!--bootstrap 启动器-->
+        <!--提供了引导配置的支持，允许应用程序在启动时从外部配置中心（如 Nacos、Consul、Config Server 等）加载配置。-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+
+        <!--注册中心客户端-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!--配置中心客户端-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>17</source> <!-- 指定源代码的 Java 版本 -->
+                    <target>17</target> <!-- 指定生成的目标字节码版本 -->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <!-- 在dependencyManagement方式引入springboot的情况下，加入如下配置才能正常打包 -->
+                <configuration>
+                    <mainClass>com.pig4cloud.pig.mcp.McpClientApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <excludes>
+                    <exclude>**/*.xlsx</exclude>
+                    <exclude>**/*.docx</exclude>
+                    <exclude>**/*.xls</exclude>
+                    <exclude>**/*.csv</exclude>
+                    <exclude>**/*.txt</exclude>
+                    <exclude>**/*.zip</exclude>
+                    <exclude>**/*.pdf</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>**/*.xlsx</include>
+                    <include>**/*.docx</include>
+                    <include>**/*.xls</include>
+                    <include>**/*.csv</include>
+                    <include>**/*.txt</include>
+                    <include>**/*.zip</include>
+                    <include>**/*.pdf</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+</project>

@@ -1,0 +1,55 @@
+[
+  {
+    "defaultFlag": true,
+    "name": "amap-maps",
+    "type": "sse",
+    "description": "支持多种定位服务，包括地理编码、天气和距离测量。提供步行、驾车、公共交通等多种交通方式的API。允许根据关键字或位置对兴趣点 (POI) 进行详细搜索",
+    "isActive": true,
+    "url": ""
+  },
+  {
+    "name": "firecrawl-mcp",
+    "defaultFlag": true,
+    "type": "stdio",
+    "description": "抓取、爬取、搜索、提取、深入研究和批量抓取支持使用 JS 渲染进行网页抓取URL 发现和抓取带有内容提取的 Web 搜索",
+    "isActive": true,
+    "command": "npx",
+    "args": [
+      "-y",
+      "firecrawl-mcp"
+    ],
+    "env": {
+      "FIRECRAWL_API_KEY": ""
+    }
+  },
+  {
+    "name": "quickchart-mcp-server",
+    "defaultFlag": true,
+    "description": "该服务器集成了 QuickChart.io 基于 URL 的图表生成服务，可使用 Chart.js 配置创建图表图像。用户可以通过提供数据和样式参数来生成各种类型的图表，服务器会将这些参数转换为图表 URL 或可下载的图像。",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@gongrzhe/quickchart-mcp-server"
+    ],
+    "type": "stdio"
+  },
+  {
+    "name": "mysqlserver",
+    "defaultFlag": true,
+    "type": "stdio",
+    "description": "一个基于Model Context Protocol的MySQL数据库操作服务器。该服务器使AI模型能够通过标准化接口与MySQL数据库进行交互",
+    "registryUrl": "https://registry.npmmirror.com",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@Malove86/mcp-mysql-server"
+    ],
+    "env": {
+      "MYSQL_HOST": "",
+      "MYSQL_PORT": "",
+      "MYSQL_USER": "",
+      "MYSQL_PASSWORD": "",
+      "MYSQL_DATABASE": ""
+    }
+  }
+]

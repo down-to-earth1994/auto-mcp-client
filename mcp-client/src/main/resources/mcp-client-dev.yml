@@ -1,0 +1,23 @@
+server:
+  port: 7707
+
+spring:
+  application:
+    name: mcp-client
+  ai:
+      openai:
+        api-key:
+        base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+        chat:
+          options:
+            stream: true
+            model: qwen2.5-72b-instruct
+          base-url:  https://dashscope.aliyuncs.com
+          completions-path: /compatible-mode/v1/chat/completions
+command:
+  exec:
+    path:
+      win-node: C:\nvm4w\nodejs\npx.cmd
+      node: /usr/local/bin/npx
+    request:
+      timeout: 30

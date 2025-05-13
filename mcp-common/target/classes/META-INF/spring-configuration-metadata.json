@@ -1,0 +1,57 @@
+{
+  "groups": [
+    {
+      "name": "command.exec.path",
+      "type": "com.pig4cloud.pig.mcp.common.properties.CommandExecProperties",
+      "sourceType": "com.pig4cloud.pig.mcp.common.properties.CommandExecProperties"
+    },
+    {
+      "name": "command.exec.request",
+      "type": "com.pig4cloud.pig.mcp.common.properties.CommandExecRequestProperties",
+      "sourceType": "com.pig4cloud.pig.mcp.common.properties.CommandExecRequestProperties"
+    },
+    {
+      "name": "mcp.config",
+      "type": "com.pig4cloud.pig.mcp.common.properties.ExternalConfigProperties",
+      "sourceType": "com.pig4cloud.pig.mcp.common.properties.ExternalConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "command.exec.path.node",
+      "type": "java.lang.String",
+      "sourceType": "com.pig4cloud.pig.mcp.common.properties.CommandExecProperties"
+    },
+    {
+      "name": "command.exec.path.python",
+      "type": "java.lang.String",
+      "sourceType": "com.pig4cloud.pig.mcp.common.properties.CommandExecProperties"
+    },
+    {
+      "name": "command.exec.path.request-timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.pig4cloud.pig.mcp.common.properties.CommandExecProperties"
+    },
+    {
+      "name": "command.exec.path.win-node",
+      "type": "java.lang.String",
+      "sourceType": "com.pig4cloud.pig.mcp.common.properties.CommandExecProperties"
+    },
+    {
+      "name": "command.exec.path.win-python",
+      "type": "java.lang.String",
+      "sourceType": "com.pig4cloud.pig.mcp.common.properties.CommandExecProperties"
+    },
+    {
+      "name": "command.exec.request.timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.pig4cloud.pig.mcp.common.properties.CommandExecRequestProperties"
+    },
+    {
+      "name": "mcp.config.json-file-path",
+      "type": "java.lang.String",
+      "sourceType": "com.pig4cloud.pig.mcp.common.properties.ExternalConfigProperties"
+    }
+  ],
+  "hints": []
+}
