@@ -1,4 +1,4 @@
-# srping-ai-mcp
+# auto-mcp-client
 
 ## 项目简介
 
