@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.pig4cloud.pig</groupId>
-    <artifactId>mcp</artifactId>
+    <artifactId>auto-mcp-client</artifactId>
     <version>1.0.0</version>
     <name>mcp</name>
     <description>mcp</description>
